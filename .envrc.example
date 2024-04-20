@@ -1,0 +1,8 @@
+# use devenv and nix to load all tools needed to develop in the repository 
+# $ cp .envrc.example .envrc
+# $ direnv allow .
+use flake --impure . 
+
+# alternatively just use `nix develop` or `nix-shell`
+export WIFI_SSID=Wifi
+export WIFI_PASSWORD="password"
