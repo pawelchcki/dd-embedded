@@ -1,7 +1,9 @@
 [package]
 name = "esp32c3-embassy"
-version = { workspace = true }
+version.workspace = true
 license = "MPL-2.0"
+edition.workspace = true
+
 
 [features]
 default = []
@@ -20,10 +22,37 @@ embedded-hal-bus = { workspace = true, features = ["async"] }
 embedded-io-async = { workspace = true }
 
 # ESP specifics
-esp-hal = { workspace = true, features = ["esp32c3", "embassy", "embassy-time-timg0", "async", "embassy-executor-thread", "rt", "vectored", "embassy-integrated-timers"] }
-esp-backtrace = { workspace = true, features = ["esp32c3", "panic-handler", "exception-handler", "println"] }
-esp-println = { workspace = true, features = ["esp32c3", "log", "uart", "colors"] }
-esp-wifi = { workspace = true, features = ["esp32c3", "wifi", "async", "tcp", "ipv4", "dhcpv4", "embassy-net"] }
+esp-hal = { workspace = true, features = [
+    "esp32c3",
+    "embassy",
+    "embassy-time-timg0",
+    "async",
+    "embassy-executor-thread",
+    "rt",
+    "vectored",
+    "embassy-integrated-timers",
+] }
+esp-backtrace = { workspace = true, features = [
+    "esp32c3",
+    "panic-handler",
+    "exception-handler",
+    "println",
+] }
+esp-println = { workspace = true, features = [
+    "esp32c3",
+    "log",
+    "uart",
+    "colors",
+] }
+esp-wifi = { workspace = true, features = [
+    "esp32c3",
+    "wifi",
+    "async",
+    "tcp",
+    "ipv4",
+    "dhcpv4",
+    "embassy-net",
+] }
 
 # Logging
 log = { workspace = true }
