@@ -1,0 +1,50 @@
+[package]
+name = "esp32c3-embassy"
+version = { workspace = true }
+license = "MPL-2.0"
+
+[features]
+default = []
+
+[dependencies]
+# Embassy
+embassy-executor = { workspace = true, features = ["nightly"] }
+embassy-sync = { workspace = true }
+embassy-time = { workspace = true }
+embassy-net = { workspace = true, features = ["dhcpv4", "dns", "tcp", "udp"] }
+
+# Hardware Abstraction Layer
+embedded-hal = { workspace = true }
+embedded-hal-async = { workspace = true }
+embedded-hal-bus = { workspace = true, features = ["async"] }
+embedded-io-async = { workspace = true }
+
+# ESP specifics
+esp-hal = { workspace = true, features = ["esp32c3", "embassy", "embassy-time-timg0", "async", "embassy-executor-thread", "rt", "vectored", "embassy-integrated-timers"] }
+esp-backtrace = { workspace = true, features = ["esp32c3", "panic-handler", "exception-handler", "println"] }
+esp-println = { workspace = true, features = ["esp32c3", "log", "uart", "colors"] }
+esp-wifi = { workspace = true, features = ["esp32c3", "wifi", "async", "tcp", "ipv4", "dhcpv4", "embassy-net"] }
+
+# Logging
+log = { workspace = true }
+
+# Static objects
+static_cell = { workspace = true }
+
+# Heapless data types
+heapless = { workspace = true }
+
+# Time
+time = { workspace = true }
+
+# TLS
+embedded-tls = { workspace = true, features = ["log"] }
+
+# HTTP
+reqwless = { workspace = true, features = ["embedded-tls", "log"] }
+
+# Random
+rand_core = { workspace = true }
+
+[lints]
+workspace = true
