@@ -806,6 +806,7 @@ dependencies = [
  "reqwless",
  "static_cell",
  "time",
+ "toml-cfg",
 ]
 
 [[package]]

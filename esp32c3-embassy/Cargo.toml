@@ -21,6 +21,8 @@ embedded-hal-async = { workspace = true }
 embedded-hal-bus = { workspace = true, features = ["async"] }
 embedded-io-async = { workspace = true }
 
+toml-cfg.workspace = true
+
 # ESP specifics
 esp-hal = { workspace = true, features = [
     "esp32c3",

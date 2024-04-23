@@ -72,9 +72,6 @@ use self::wifi::{connect as connect_to_wifi, Error as WifiError, STOP_WIFI_SIGNA
 
 mod worldtimeapi;
 
-/// Period to wait between readings
-const SAMPLING_PERIOD: Duration = Duration::from_secs(60);
-
 /// Duration of deep sleep
 const DEEP_SLEEP_DURATION: Duration = Duration::from_secs(300);
 
@@ -82,10 +79,10 @@ const DEEP_SLEEP_DURATION: Duration = Duration::from_secs(300);
 const AWAKE_PERIOD: Duration = Duration::from_secs(300);
 
 /// SSID for WiFi network
-const WIFI_SSID: &str = "Garum_IOT"; // env!("WIFI_SSID");
+const WIFI_SSID: &str = "Galaxy S23p"; // env!("WIFI_SSID");
 
 /// Password for WiFi network
-const WIFI_PASSWORD: &str = "zegarek1"; //env!("WIFI_PASSWORD");
+const WIFI_PASSWORD: &str = "baranek1"; //env!("WIFI_PASSWORD");
 
 /// Size of SPI DMA descriptors
 const DESCRIPTORS_SIZE: usize = 8 * 3;

@@ -52,6 +52,8 @@ reqwless = { version = "0.11", default-features = false }
 # Random
 rand_core = { version = "0.6", default-features = false }
 
+toml-cfg = { version = "0.2.0" }
+
 [workspace.lints.rust]
 missing_docs = "allow"
 
